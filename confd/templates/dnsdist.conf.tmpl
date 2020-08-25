@@ -1,3 +1,4 @@
+setLocal("0.0.0.0:53")
 {{if ls "/dnsdist/password"}}{{if ls "/dnsdist/apikey"}}webserver("0.0.0.0:80", "{{getv "/dnsdist/password" ""}}", "{{getv "/dnsdist/apikey" ""}}"){{end}}{{end}}
 {{range ls "/dnsdist/upstream"}}newServer({address="{{getv (print "/dnsdist/upstream/" .)}}", name="{{.}}"})
 {{end}}
