@@ -1,0 +1,8 @@
+[template]
+src  = "dnsdist.conf.tmpl"
+dest = "/etc/dnsdist/dnsdist.conf"
+keys = [
+  "/dnsdist/apikey",
+  "/dnsdist/password",
+  "/dnsdist/upstream"
+]
